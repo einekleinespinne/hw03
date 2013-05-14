@@ -10,9 +10,9 @@ $("#first").trigger("change");
 $(".selectpicker").selectpicker()},
 renew=function(a){$.getJSON("http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid="+a,
 function(a){
-$("#result #title").text(a.query.results.channel.item.title);
+$("#result #title").text(a.query.results.channel.location.city);
 $("#result #date").text(a.query.results.channel.item.pubDate);
-$("#result #location").text("latitude:"+a.query.results.channel.item.lat+",longitude:"+a.query.results.channel.item.long);
+$("#result #location").text("latitude:"+a.query.results.channel.item.lat+"°N, longitude:"+a.query.results.channel.item.long+"°E");
 $("#result #temp").text(Math.round((a.query.results.channel.item.condition.temp-32)*5/9)+"℃");
 $("#result #text").text(a.query.results.channel.item.condition.text);
 })};
