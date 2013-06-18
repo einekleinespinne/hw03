@@ -28,7 +28,7 @@ var aname="realname";
 atime="realtime";
 alocation="reallocation";
 adescription="realdescription";
-adate="17 Jun 2013";
+adate="18 Jun 2013";
  var renew=function(a){
  	$.getJSON("http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid="+28751955,
 	function(a){
@@ -40,9 +40,9 @@ adate="17 Jun 2013";
 			$("#aktvt #aktvtdate").text(a.query.results.channel.item.forecast[0].date);
 			$("#aktvt #aktvttemp").text(Math.round(((a.query.results.channel.item.forecast[0].high)/2+(a.query.results.channel.item.forecast[0].low)/2-32)*5/9)+"℃");
 			var atext=String(a.query.results.channel.item.forecast[0].text);
-			if(atext==="Clear"||atext==="Sunny"){
+			if(atext==="Clear"||atext==="Sunny"||atext==="Mostly Clear"){
 				document.wpic.src="http://db.tt/PpGBPl5s";
-			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"){
+			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"||atext==="Scattered Thunderstorms"){
 				document.wpic.src="http://db.tt/AtgYUlSs";
 			}else if (atext==="Partly Cloudy"||atext==="Cloudy"){
 				document.wpic.src="http://db.tt/oDfLbiYm";
@@ -63,9 +63,9 @@ adate="17 Jun 2013";
 			$("#aktvt #aktvtdate").text(a.query.results.channel.item.forecast[1].date);
 			$("#aktvt #aktvttemp").text(Math.round(((a.query.results.channel.item.forecast[1].high)/2+(a.query.results.channel.item.forecast[1].low)/2-32)*5/9)+"℃");
 			var atext=String(a.query.results.channel.item.forecast[1].text);
-			if(atext==="Clear"||atext==="Sunny"){
+			if(atext==="Clear"||atext==="Sunny"||atext==="Mostly Clear"){
 				document.wpic.src="http://db.tt/PpGBPl5s";
-			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"){
+			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"||atext==="Scattered Thunderstorms"){
 				document.wpic.src="http://db.tt/AtgYUlSs";
 			}else if (atext==="Partly Cloudy"||atext==="Cloudy"){
 				document.wpic.src="http://db.tt/oDfLbiYm";
@@ -86,9 +86,9 @@ adate="17 Jun 2013";
 			$("#aktvt #aktvtdate").text(a.query.results.channel.item.forecast[2].date);
 			$("#aktvt #aktvttemp").text(Math.round(((a.query.results.channel.item.forecast[2].high)/2+(a.query.results.channel.item.forecast[2].low)/2-32)*5/9)+"℃");
 			var atext=String(a.query.results.channel.item.forecast[2].text);
-			if(atext==="Clear"||atext==="Sunny"){
+			if(atext==="Clear"||atext==="Sunny"||atext==="Mostly Clear"){
 				document.wpic.src="http://db.tt/PpGBPl5s";
-			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"){
+			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"||atext==="Scattered Thunderstorms"){
 				document.wpic.src="http://db.tt/AtgYUlSs";
 			}else if (atext==="Partly Cloudy"||atext==="Cloudy"){
 				document.wpic.src="http://db.tt/oDfLbiYm";
@@ -109,9 +109,9 @@ adate="17 Jun 2013";
 			$("#aktvt #aktvtdate").text(a.query.results.channel.item.forecast[3].date);
 			$("#aktvt #aktvttemp").text(Math.round(((a.query.results.channel.item.forecast[3].high)/2+(a.query.results.channel.item.forecast[3].low)/2-32)*5/9)+"℃");
 			var atext=String(a.query.results.channel.item.forecast[3].text);
-			if(atext==="Clear"||atext==="Sunny"){
+			if(atext==="Clear"||atext==="Sunny"||atext==="Mostly Clear"){
 				document.wpic.src="http://db.tt/PpGBPl5s";
-			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"){
+			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"||atext==="Scattered Thunderstorms"){
 				document.wpic.src="http://db.tt/AtgYUlSs";
 			}else if (atext==="Partly Cloudy"||atext==="Cloudy"){
 				document.wpic.src="http://db.tt/oDfLbiYm";
@@ -132,9 +132,9 @@ adate="17 Jun 2013";
 			$("#aktvt #aktvtdate").text(a.query.results.channel.item.forecast[4].date);
 			$("#aktvt #aktvttemp").text(Math.round(((a.query.results.channel.item.forecast[4].high)/2+(a.query.results.channel.item.forecast[4].low)/2-32)*5/9)+"℃");
 			var atext=String(a.query.results.channel.item.forecast[4].text);
-			if(atext==="Clear"||atext==="Sunny"){
+			if(atext==="Clear"||atext==="Sunny"||atext==="Mostly Clear"){
 				document.wpic.src="http://db.tt/PpGBPl5s";
-			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"){
+			}else if (atext==="PM Thunderstorms"||atext==="Thunderstorms"||atext==="Scattered Thunderstorms"){
 				document.wpic.src="http://db.tt/AtgYUlSs";
 			}else if (atext==="Partly Cloudy"||atext==="Cloudy"){
 				document.wpic.src="http://db.tt/oDfLbiYm";
